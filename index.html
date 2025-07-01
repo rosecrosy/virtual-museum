@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mental Health Artworks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- FRONT PAGE -->
+  <div id="front-page" class="front">
+    <h1>Mental Health Artwork Around the World</h1>
+    
+    <div class="thumbnail-grid">
+      <img src="artwork1.png" alt="Artwork 1" />
+      <img src="artwork2.png" alt="Artwork 2" />
+      <img src="artwork3.png" alt="Artwork 3" />
+      <img src="artwork4.png" alt="Artwork 4" />
+      <img src="artwork5.png" alt="Artwork 5" />
+      <img src="artwork6.png" alt="Artwork 6" />
+      <img src="artwork7.png" alt="Artwork 7" />
+      <img src="artwork8.png" alt="Artwork 8" />
+    </div>
+
+    <button class="explore-btn" onclick="startMuseum()">Explore</button>
+  </div>
+
+  <!-- ARTWORK VIEWER -->
+  <div id="museum" class="museum hidden">
+    <div class="frame">
+      <img id="artwork" src="" alt="Artwork" />
+      <div class="info">
+        <h2 id="title"></h2>
+        <p id="description"></p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="prevArtwork()">⟵ Prev</button>
+      <button onclick="nextArtwork()">Next ⟶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <div id="ending" class="ending hidden">
+  <h2>Thank You for Exploring</h2>
+  <p>Your journey through mental health artworks reminds us how art can give voice to invisible struggles around the world.</p>
+  <p><strong>Let’s continue to support mental health awareness and empathy through creativity.</strong></p>
+  <button onclick="goBack()">Go Back to Front Page</button>
+</div>
+</body>
+</html>
