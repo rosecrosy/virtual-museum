@@ -85,8 +85,21 @@ let index = 0;
 
 function displayArtwork(i) {
   const artwork = artworks[i];
-  document.getElementById("artwork").src = artwork.img;
-  document.getElementById("title").textContent = `Name of the Artwork: ${artwork.title}`;
+  const imgEl = document.getElementById("artwork");
+
+  imgEl.src = artwork.img;
+
+  // Add portrait class to 2, 4, 5, 7 (index 1, 3, 4, 6)
+  const portraitIndexes = [1, 3, 4, 6];
+  if (portraitIndexes.includes(i)) {
+    imgEl.classList.add("portrait-art");
+  } else {
+    imgEl.classList.remove("portrait-art");
+  }
+
+  // Only artwork title
+  document.getElementById("title").textContent = artwork.title;
+
   document.getElementById("description").innerHTML = `
     <strong>Artist:</strong> ${artwork.artist}<br/>
     <strong>Country:</strong> ${artwork.country}<br/>
@@ -100,6 +113,7 @@ function displayArtwork(i) {
 function startMuseum() {
   document.getElementById("front-page").classList.add("hidden");
   document.getElementById("museum").classList.remove("hidden");
+  document.getElementById("ending").classList.add("hidden");
   displayArtwork(index);
 }
 

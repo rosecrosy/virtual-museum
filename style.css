@@ -84,6 +84,13 @@ body {
   border: 5px solid #ccc;
 }
 
+/* Portrait-specific resizing */
+.portrait-art {
+  max-height: 400px;
+  width: auto;
+  object-fit: contain;
+}
+
 .info {
   margin-top: 20px;
   color: #333;
